@@ -1,14 +1,20 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-// constant
+// constants
 const PORT = 5050;
+
+// routes imports
+const paymentRoute = require('./src/routes/payment')
 
 // express app;
 const app = express();
 
 // middlewares
 app.use(bodyParser.json())
+
+// routes middlewares
+app.use('/payments', paymentRoute)
 
 // initial route
 app.get('/', (req, res) => {
