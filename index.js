@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 // initial route
 app.get('/', (req, res) => {
-    res.send('<h2>Simple Express Server</h2>');
+    res.send('<h2>Hello Stripe</h2>');
 });
 
 // port listen
